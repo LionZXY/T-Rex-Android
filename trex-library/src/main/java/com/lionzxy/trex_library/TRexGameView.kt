@@ -41,7 +41,12 @@ open class TRexGameView : WebView,
         attrs,
         defStyleAttr
     ) {
-        webViewClient = WebViewClient()
+        webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                progressListeners.forEach { it.showProgress(false) }
+            }
+        }
         settings.allowFileAccess = true
         settings.allowContentAccess = true
         settings.allowFileAccessFromFileURLs = true
@@ -82,7 +87,6 @@ open class TRexGameView : WebView,
             handler.post { onFile(file) }
             return
         }
-        progressListeners.forEach { it.showProgress(false) }
         if (file == null) {
             errorListener?.onError()
             return
