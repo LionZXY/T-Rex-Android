@@ -28,8 +28,9 @@ dependencies {
 ```
 
 | ![](assets/noprogress.gif) | ![](assets/progress.gif) | ![](assets/offline.gif) |
-|-|-|-|
+|:---:|:---:|:---:|
 | `TRexGameView` | `TRexProgressView` | `TRexOfflineView` |
+| Simple | With progress bar | Offline view +47kb |
 
 3. Add View or Activity in project
 
