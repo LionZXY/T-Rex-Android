@@ -1,0 +1,5 @@
+include ':trex-offline'
+include ':trex-progress'
+include ':trex-library'
+include ':app'
+rootProject.name = "T-Rex Game Library"
