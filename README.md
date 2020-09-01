@@ -17,13 +17,13 @@ allprojects {
 }
 ```
 
-2. Add dependency
+2. Add dependency. Library have three types:
 
 ```groovy
 dependencies {
 	implementation 'com.github.LionZXY.T-Rex-Android:trex-library:1.0.0' // For only trex view
 	// With progress bar: implementation 'com.github.LionZXY.T-Rex-Android:trex-progress:1.0.0'
-    // Full offline: implementation 'com.github.LionZXY.T-Rex-Android:trex-offline:1.0.0'
+	// Full offline: implementation 'com.github.LionZXY.T-Rex-Android:trex-offline:1.0.0'
 }
 ```
 
